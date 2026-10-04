@@ -1,0 +1,4 @@
+numpy>=1.26
+scipy>=1.11
+pillow>=10.0
+pyloudnorm>=0.1.1  # optional: loudness targeting/measurement

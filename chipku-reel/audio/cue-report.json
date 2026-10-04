@@ -1,0 +1,491 @@
+{
+  "stats": {
+    "durationSeconds": 20.0,
+    "samples": 960000,
+    "loudnessGainDb": 4.66,
+    "preLimiterPeakDb": 1.56,
+    "samplePeakDb": -2.0,
+    "truePeakDbTP": -1.48,
+    "rmsDb": -17.02,
+    "lastNonSilentSecond": 19.741,
+    "integratedLUFS": -14.8
+  },
+  "cues": [
+    {
+      "cue": "hook.avatar",
+      "frame": 0,
+      "time": 0.0,
+      "sfx": "whooshSoft",
+      "gainDb": -24
+    },
+    {
+      "cue": "hook.item1",
+      "frame": 6,
+      "time": 0.2,
+      "sfx": "pop",
+      "gainDb": -25
+    },
+    {
+      "cue": "hook.item2",
+      "frame": 12,
+      "time": 0.4,
+      "sfx": "pop",
+      "gainDb": -25
+    },
+    {
+      "cue": "hook.item3",
+      "frame": 18,
+      "time": 0.6,
+      "sfx": "pop",
+      "gainDb": -25
+    },
+    {
+      "cue": "hook.w1",
+      "frame": 22,
+      "time": 0.733,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "hook.w2",
+      "frame": 28,
+      "time": 0.933,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "hook.w3",
+      "frame": 34,
+      "time": 1.133,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "hook.w4",
+      "frame": 44,
+      "time": 1.467,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "hook.w5",
+      "frame": 50,
+      "time": 1.667,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "hook.accent",
+      "frame": 60,
+      "time": 2.0,
+      "sfx": "chime",
+      "gainDb": -19
+    },
+    {
+      "cue": "hook.underline",
+      "frame": 66,
+      "time": 2.2,
+      "sfx": "swish",
+      "gainDb": -26
+    },
+    {
+      "cue": "hook.wipe",
+      "frame": 85,
+      "time": 2.833,
+      "sfx": "whoosh",
+      "gainDb": -15
+    },
+    {
+      "cue": "products.land",
+      "frame": 90,
+      "time": 3.0,
+      "sfx": "impact",
+      "gainDb": -12
+    },
+    {
+      "cue": "products.avatar",
+      "frame": 92,
+      "time": 3.067,
+      "sfx": "whooshSoft",
+      "gainDb": -25
+    },
+    {
+      "cue": "products.logoLand",
+      "frame": 99,
+      "time": 3.3,
+      "sfx": "slap",
+      "gainDb": -13
+    },
+    {
+      "cue": "products.pill",
+      "frame": 106,
+      "time": 3.533,
+      "sfx": "pop",
+      "gainDb": -22
+    },
+    {
+      "cue": "products.posters",
+      "frame": 112,
+      "time": 3.733,
+      "sfx": "pop",
+      "gainDb": -17
+    },
+    {
+      "cue": "products.polaroids",
+      "frame": 126,
+      "time": 4.2,
+      "sfx": "shutter",
+      "gainDb": -17
+    },
+    {
+      "cue": "products.stickers",
+      "frame": 140,
+      "time": 4.667,
+      "sfx": "pop",
+      "gainDb": -17
+    },
+    {
+      "cue": "products.w1",
+      "frame": 150,
+      "time": 5.0,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "products.accent",
+      "frame": 156,
+      "time": 5.2,
+      "sfx": "chime",
+      "gainDb": -20
+    },
+    {
+      "cue": "products.underline",
+      "frame": 160,
+      "time": 5.333,
+      "sfx": "swish",
+      "gainDb": -26
+    },
+    {
+      "cue": "products.whip",
+      "frame": 180,
+      "time": 6.0,
+      "sfx": "whoosh",
+      "gainDb": -14
+    },
+    {
+      "cue": "categories.panel",
+      "frame": 186,
+      "time": 6.2,
+      "sfx": "whooshSoft",
+      "gainDb": -25
+    },
+    {
+      "cue": "categories.badge",
+      "frame": 190,
+      "time": 6.333,
+      "sfx": "pop",
+      "gainDb": -23
+    },
+    {
+      "cue": "categories.w1",
+      "frame": 196,
+      "time": 6.533,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "categories.w2",
+      "frame": 202,
+      "time": 6.733,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "categories.accent",
+      "frame": 208,
+      "time": 6.933,
+      "sfx": "chime",
+      "gainDb": -20
+    },
+    {
+      "cue": "categories.underline",
+      "frame": 212,
+      "time": 7.067,
+      "sfx": "swish",
+      "gainDb": -26
+    },
+    {
+      "cue": "categories.tile1",
+      "frame": 214,
+      "time": 7.133,
+      "sfx": "pop",
+      "gainDb": -19
+    },
+    {
+      "cue": "categories.tile2",
+      "frame": 221,
+      "time": 7.367,
+      "sfx": "pop",
+      "gainDb": -19
+    },
+    {
+      "cue": "categories.tile3",
+      "frame": 228,
+      "time": 7.6,
+      "sfx": "pop",
+      "gainDb": -19
+    },
+    {
+      "cue": "categories.tile4",
+      "frame": 235,
+      "time": 7.833,
+      "sfx": "pop",
+      "gainDb": -19
+    },
+    {
+      "cue": "categories.tile5",
+      "frame": 242,
+      "time": 8.067,
+      "sfx": "pop",
+      "gainDb": -19
+    },
+    {
+      "cue": "categories.tile6",
+      "frame": 249,
+      "time": 8.3,
+      "sfx": "pop",
+      "gainDb": -19
+    },
+    {
+      "cue": "categories.click",
+      "frame": 264,
+      "time": 8.8,
+      "sfx": "click",
+      "gainDb": -15
+    },
+    {
+      "cue": "categories.added",
+      "frame": 266,
+      "time": 8.867,
+      "sfx": "pop",
+      "gainDb": -22
+    },
+    {
+      "cue": "categories.wipe",
+      "frame": 282,
+      "time": 9.4,
+      "sfx": "whoosh",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.panel",
+      "frame": 290,
+      "time": 9.667,
+      "sfx": "whooshSoft",
+      "gainDb": -25
+    },
+    {
+      "cue": "offers.w1",
+      "frame": 296,
+      "time": 9.867,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "offers.w2",
+      "frame": 302,
+      "time": 10.067,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "offers.accent",
+      "frame": 308,
+      "time": 10.267,
+      "sfx": "chime",
+      "gainDb": -20
+    },
+    {
+      "cue": "offers.underline",
+      "frame": 312,
+      "time": 10.4,
+      "sfx": "swish",
+      "gainDb": -26
+    },
+    {
+      "cue": "offers.card1",
+      "frame": 315,
+      "time": 10.5,
+      "sfx": "pop",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.price1",
+      "frame": 320,
+      "time": 10.667,
+      "sfx": "chime",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.card2",
+      "frame": 330,
+      "time": 11.0,
+      "sfx": "pop",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.price2",
+      "frame": 335,
+      "time": 11.167,
+      "sfx": "chime",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.card3",
+      "frame": 345,
+      "time": 11.5,
+      "sfx": "pop",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.price3",
+      "frame": 350,
+      "time": 11.667,
+      "sfx": "chime",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.card4",
+      "frame": 360,
+      "time": 12.0,
+      "sfx": "pop",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.price4",
+      "frame": 365,
+      "time": 12.167,
+      "sfx": "chime",
+      "gainDb": -15
+    },
+    {
+      "cue": "offers.sparkle",
+      "frame": 372,
+      "time": 12.4,
+      "sfx": "sparkle",
+      "gainDb": -22
+    },
+    {
+      "cue": "offers.dither",
+      "frame": 432,
+      "time": 14.4,
+      "sfx": "whooshLow",
+      "gainDb": -14
+    },
+    {
+      "cue": "statement.land",
+      "frame": 435,
+      "time": 14.5,
+      "sfx": "impact",
+      "gainDb": -11
+    },
+    {
+      "cue": "statement.avatar",
+      "frame": 438,
+      "time": 14.6,
+      "sfx": "whooshSoft",
+      "gainDb": -25
+    },
+    {
+      "cue": "statement.w1",
+      "frame": 440,
+      "time": 14.667,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "statement.w2",
+      "frame": 446,
+      "time": 14.867,
+      "sfx": "tick",
+      "gainDb": -27
+    },
+    {
+      "cue": "statement.accent",
+      "frame": 452,
+      "time": 15.067,
+      "sfx": "chime",
+      "gainDb": -18
+    },
+    {
+      "cue": "statement.underline",
+      "frame": 456,
+      "time": 15.2,
+      "sfx": "swish",
+      "gainDb": -26
+    },
+    {
+      "cue": "statement.wipe",
+      "frame": 476,
+      "time": 15.867,
+      "sfx": "whoosh",
+      "gainDb": -16
+    },
+    {
+      "cue": "endcard.logoLand",
+      "frame": 489,
+      "time": 16.3,
+      "sfx": "slap",
+      "gainDb": -12
+    },
+    {
+      "cue": "endcard.avatar",
+      "frame": 494,
+      "time": 16.467,
+      "sfx": "pop",
+      "gainDb": -19
+    },
+    {
+      "cue": "endcard.accent",
+      "frame": 514,
+      "time": 17.133,
+      "sfx": "chime",
+      "gainDb": -20
+    },
+    {
+      "cue": "endcard.cta",
+      "frame": 518,
+      "time": 17.267,
+      "sfx": "whooshSoft",
+      "gainDb": -24
+    },
+    {
+      "cue": "endcard.pill",
+      "frame": 526,
+      "time": 17.533,
+      "sfx": "pop",
+      "gainDb": -17
+    },
+    {
+      "cue": "endcard.typing",
+      "frame": 528,
+      "time": 17.6,
+      "sfx": "typing",
+      "gainDb": -27
+    },
+    {
+      "cue": "endcard.click",
+      "frame": 556,
+      "time": 18.533,
+      "sfx": "click",
+      "gainDb": -13
+    },
+    {
+      "cue": "endcard.sparkle",
+      "frame": 558,
+      "time": 18.6,
+      "sfx": "sparkle",
+      "gainDb": -20
+    }
+  ]
+}

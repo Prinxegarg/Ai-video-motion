@@ -1,0 +1,33 @@
+{
+  "name": "chipku-reel",
+  "version": "1.0.0",
+  "description": "20-second promotional motion graphics reel for CHIPKU (posters, Polaroids, stickers)",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "remotion studio",
+    "assets": "python3 scripts/prepare_assets.py",
+    "audio": "python3 audio/generate_audio.py",
+    "render": "remotion render ChipkuReel out/chipku-reel.mp4",
+    "deliver": "bash scripts/deliver.sh",
+    "still": "remotion still ChipkuReel out/chipku-still.png --frame=390",
+    "lint": "eslint src && tsc"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "@remotion/google-fonts": "4.0.532",
+    "@remotion/media": "4.0.532",
+    "@remotion/paths": "4.0.532",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.532"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.532",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.39.5",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  }
+}
