@@ -5,9 +5,29 @@
  * All configuration options: https://remotion.dev/docs/config
  */
 
+import path from "node:path";
 import { Config } from "@remotion/cli/config";
 
 Config.setRspack(true);
+
+// The CHIPKU reel (chipku-reel/) is a separate project that is also registered
+// in this Studio. Resolve its packages from THIS project's node_modules so React
+// and Remotion are never loaded twice (chipku-reel/node_modules has its own copies).
+// overrideBundlerConfig applies to both Rspack and Webpack.
+const rootNodeModules = path.resolve(process.cwd(), "node_modules");
+Config.overrideBundlerConfig((config) => ({
+  ...config,
+  module: {
+    ...config.module,
+    rules: [
+      ...(config.module?.rules ?? []),
+      {
+        include: path.resolve(process.cwd(), "chipku-reel", "src"),
+        resolve: { modules: [rootNodeModules] },
+      },
+    ],
+  },
+}));
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 

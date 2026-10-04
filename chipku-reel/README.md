@@ -29,6 +29,12 @@ npm run deliver    # render + mux the exact-20.000 s deliverable (needs ffmpeg)
 npm run lint       # ESLint + TypeScript
 ```
 
+The reel is also registered in the **repo-root Studio**: run `npm run dev` in the repo root and
+pick **Chipku → ChipkuReel** in the compositions list (`npm run render:chipku` renders it from
+there). Both Studios use the same registration, `src/ChipkuReelComposition.tsx` (id, size, fps
+and duration come from `src/timeline.json`). Media is imported in `src/assets.ts` rather than
+loaded with `staticFile()`, so it resolves from either project.
+
 If Remotion can't download its headless Chrome (offline or CI), set
 `REMOTION_BROWSER_EXECUTABLE=/path/to/chrome-headless-shell`. `remotion.config.ts` reads it.
 
@@ -48,6 +54,8 @@ src/timeline.json          ★ single source of truth for every animation and so
 src/offers.ts              the four offers + Instagram handle (copied verbatim from the brief)
 src/theme.ts               brand palette + fonts
 src/ChipkuReel.tsx         main composition (6 scenes, grain, soundtrack)
+src/ChipkuReelComposition.tsx  the <Composition> registration shared by both Studios
+src/assets.ts              imported media (logos, grain, soundtrack)
 src/scenes/                Hook, Products, Categories, Offers, Statement, EndCard
 src/components/            Avatar (mascot), ProductArt (posters, Polaroids, stickers), Type, Chrome, Transitions
 src/dev/                   preview compositions for the mascot and product art

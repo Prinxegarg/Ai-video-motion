@@ -61,6 +61,11 @@ scripts/
   new-composition.mjs      `npm run new` scaffolder
   generate-sample-audio.sh Regenerates public/audio with FFmpeg
 out/                       Render output (git-ignored)
+chipku-reel/               Separate CHIPKU promo project (own package.json, Root, assets, Python audio).
+                           Also registered in THIS Studio under the "Chipku" folder via
+                           chipku-reel/src/ChipkuReelComposition.tsx. Its media is imported
+                           (chipku-reel/src/assets.ts), not loaded with staticFile(), and
+                           remotion.config.ts resolves its packages from the root node_modules.
 ```
 
 ### Reusable components (`src/components`)

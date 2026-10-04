@@ -33,6 +33,8 @@ npm run render       # export the sample → out/showcase.mp4
 | List compositions | `npm run compositions` |
 | Create a new composition | `npm run new -- MyVideo` (`--seconds=10`, `--format=vertical\|square\|portrait\|landscape4k`) |
 | Export the sample MP4 | `npm run render` |
+| Preview the CHIPKU reel | `npm run dev` → **Chipku → ChipkuReel** (or `http://localhost:3000/ChipkuReel`) |
+| Export the CHIPKU reel | `npm run render:chipku` → `out/chipku-reel.mp4` (exact-20 s deliverable: `cd chipku-reel && npm run deliver`) |
 | Export any composition | `npx remotion render <CompositionId> out/<name>.mp4` |
 | Export a poster frame | `npm run still` |
 | Higher quality / 4K | `npx remotion render Showcase out/4k.mp4 --width=3840 --height=2160 --crf=16` |

@@ -1,5 +1,6 @@
 import { useId } from "react";
-import { Img, staticFile } from "remotion";
+import { Img } from "remotion";
+import { ASSETS } from "../assets";
 import { C } from "../theme";
 
 /** Warm off-white used for skin — a tint inside the brand's off-white family. */
@@ -220,7 +221,7 @@ export const Avatar: React.FC<AvatarProps> = ({
 
       {body ? (
         <Img
-          src={staticFile("brand/chipku-logo-initial.png")}
+          src={ASSETS.logoInitial}
           style={{
             position: "absolute",
             left: 372,

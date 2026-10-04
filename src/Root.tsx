@@ -7,6 +7,7 @@ import { showcaseSchema } from "./compositions/Showcase/schema";
 import { Showcase } from "./compositions/Showcase/Showcase";
 import { getShowcaseTimeline } from "./compositions/Showcase/timeline";
 import { VIDEO } from "./config/video";
+import { ChipkuReelComposition } from "../chipku-reel/src/ChipkuReelComposition";
 // @new-composition-imports — `npm run new` adds imports above this line.
 
 const showcase = getShowcaseTimeline(VIDEO.fps);
@@ -123,6 +124,11 @@ export const RemotionRoot: React.FC = () => {
             soundEffects: true,
           }}
         />
+      </Folder>
+
+      {/* CHIPKU promo reel — source lives in chipku-reel/ (also runnable on its own). */}
+      <Folder name="Chipku">
+        <ChipkuReelComposition />
       </Folder>
 
       {/* @new-compositions — `npm run new` adds compositions above this line. */}

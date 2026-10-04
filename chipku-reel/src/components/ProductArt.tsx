@@ -1,5 +1,6 @@
 import { useId } from "react";
-import { Img, staticFile } from "remotion";
+import { Img } from "remotion";
+import { ASSETS } from "../assets";
 import { C, F } from "../theme";
 
 export type Category = "sports" | "cars" | "music" | "motivation" | "trending";
@@ -265,7 +266,7 @@ export const Sticker: React.FC<{
   if (kind === "logo") {
     return (
       <div style={{ width: size, height: size, filter: outline, ...style }}>
-        <Img src={staticFile("brand/chipku-logo-initial.png")} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+        <Img src={ASSETS.logoInitial} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
       </div>
     );
   }

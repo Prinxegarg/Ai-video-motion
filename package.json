@@ -29,6 +29,7 @@
   "scripts": {
     "dev": "remotion studio",
     "render": "remotion render Showcase out/showcase.mp4",
+    "render:chipku": "remotion render ChipkuReel out/chipku-reel.mp4",
     "still": "remotion still Showcase out/showcase-poster.png --frame=75",
     "compositions": "remotion compositions",
     "new": "node scripts/new-composition.mjs",

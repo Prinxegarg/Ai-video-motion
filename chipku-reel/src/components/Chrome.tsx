@@ -1,4 +1,5 @@
-import { AbsoluteFill, Img, interpolate, random, spring, staticFile, useVideoConfig } from "remotion";
+import { AbsoluteFill, Img, interpolate, random, spring, useVideoConfig } from "remotion";
+import { ASSETS } from "../assets";
 import { CLAMP, EASE, prog, timecode } from "../lib/motion";
 import { C, F } from "../theme";
 import { Avatar, type AvatarProps } from "./Avatar";
@@ -167,14 +168,14 @@ export const LogoSlap: React.FC<{
   readonly width: number;
   readonly src?: string;
   readonly style?: React.CSSProperties;
-}> = ({ at, land, width, src = "brand/chipku-logo-full.png", style }) => {
+}> = ({ at, land, width, src = ASSETS.logoFull, style }) => {
   const frame = useAbsFrame();
   const drop = prog(frame, at, land - at, EASE.in);
   const settle = interpolate(frame, [land, land + 3, land + 7, land + 12], [0.94, 1.03, 0.99, 1], CLAMP);
   const scale = frame < land ? interpolate(drop, [0, 1], [1.8, 0.94]) : settle;
   return (
     <Img
-      src={staticFile(src)}
+      src={src}
       style={{
         width,
         height: "auto",
@@ -198,7 +199,7 @@ export const Grain: React.FC = () => {
       {Array.from({ length: rows * cols }).map((_, i) => (
         <Img
           key={i}
-          src={staticFile("textures/grain.png")}
+          src={ASSETS.grain}
           style={{ position: "absolute", left: (i % cols) * tile, top: Math.floor(i / cols) * tile, width: tile, height: tile }}
         />
       ))}
