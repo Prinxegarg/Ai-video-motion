@@ -66,6 +66,9 @@ chipku-reel/               Separate CHIPKU promo project (own package.json, Root
                            chipku-reel/src/ChipkuReelComposition.tsx. Its media is imported
                            (chipku-reel/src/assets.ts), not loaded with staticFile(), and
                            remotion.config.ts resolves its packages from the root node_modules.
+showreel/                  Separate CLAUDE motion-design showreel (15 s, 60 fps, Remotion 4.0.533, own
+                           package.json and node_modules, Python-synthesised audio). Work inside
+                           showreel/ (`npm install && npm run dev`); see showreel/README.md.
 ```
 
 ### Reusable components (`src/components`)

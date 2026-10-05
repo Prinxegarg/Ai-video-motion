@@ -18,6 +18,7 @@
     "remotion.config.ts",
     "chipku-reel/node_modules",
     "chipku-reel/out",
-    "chipku-reel/remotion.config.ts"
+    "chipku-reel/remotion.config.ts",
+    "showreel"
   ]
 }

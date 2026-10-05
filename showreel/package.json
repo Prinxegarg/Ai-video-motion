@@ -1,0 +1,38 @@
+{
+  "name": "claude-showreel",
+  "version": "1.0.0",
+  "description": "CLAUDE — Motion Designer showreel: a 15-second, 60 fps motion graphics reel built entirely in code with Remotion",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.533",
+    "@remotion/fonts": "4.0.533",
+    "@remotion/media": "4.0.533",
+    "@remotion/motion-blur": "4.0.533",
+    "@remotion/noise": "4.0.533",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.533"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.533",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.39.5",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "compositions": "remotion compositions",
+    "render": "remotion render ClaudeShowreel out/claude-showreel.mp4",
+    "deliver": "bash scripts/deliver.sh",
+    "audio": "python3 audio/generate_audio.py",
+    "assets": "python3 scripts/prepare_assets.py",
+    "fonts": "python3 scripts/fetch_fonts.py",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "fps": 60,
+  "width": 1920,
+  "height": 1080,
+  "bpm": 128,
+  "beatsPerBar": 4,
+  "totalBeats": 32,
+  "durationInFrames": 900,
+  "sections": {
+    "leader": [0, 4],
+    "slam": [4, 8],
+    "type": [8, 11],
+    "shape": [11, 14],
+    "cube": [14, 16],
+    "particles": [16, 19],
+    "fluid": [19, 22],
+    "data": [22, 24],
+    "wall": [24, 28],
+    "end": [28, 32]
+  },
+  "cuts": [8, 11, 14, 16, 19, 22, 24, 28],
+  "cues": [
+    { "beat": 0, "sfx": "blip", "gain": -17, "note": 84 },
+    { "beat": 0.5, "sfx": "zip", "gain": -19 },
+    { "beat": 1, "sfx": "leader", "gain": -15 },
+    { "beat": 2, "sfx": "leader", "gain": -15 },
+    { "beat": 3, "sfx": "leader", "gain": -15 },
+    { "beat": 3.5, "sfx": "suck", "gain": -16, "peakAt": 4 },
+
+    { "beat": 4, "sfx": "impact", "gain": -9 },
+    { "beat": 5, "sfx": "stretch", "gain": -19 },
+    { "beat": 6, "sfx": "stamp", "gain": -18, "note": 65 },
+    { "beat": 6.5, "sfx": "stamp", "gain": -18, "note": 68 },
+    { "beat": 7, "sfx": "stamp", "gain": -18, "note": 72 },
+    { "beat": 7.25, "sfx": "burst", "gain": -15 },
+    { "beat": 7.75, "sfx": "glitch", "gain": -19 },
+
+    { "beat": 8, "sfx": "hit", "gain": -13 },
+    { "beat": 9, "sfx": "swish", "gain": -22 },
+    { "beat": 10, "sfx": "swish", "gain": -22 },
+
+    { "beat": 11, "sfx": "hit", "gain": -13 },
+    { "beat": 11.5, "sfx": "pluck", "gain": -17, "note": 77 },
+    { "beat": 12, "sfx": "pluck", "gain": -17, "note": 80 },
+    { "beat": 12.5, "sfx": "pluck", "gain": -17, "note": 84 },
+    { "beat": 13, "sfx": "pluck", "gain": -17, "note": 82 },
+    { "beat": 13.5, "sfx": "pluck", "gain": -17, "note": 87 },
+    { "beat": 13.75, "sfx": "pluck", "gain": -18, "note": 89 },
+
+    { "beat": 14, "sfx": "hit", "gain": -13 },
+    { "beat": 14.25, "sfx": "rumble", "gain": -18 },
+    { "beat": 15, "sfx": "burst", "gain": -14 },
+
+    { "beat": 16, "sfx": "hit", "gain": -13 },
+    { "beat": 16.25, "sfx": "shimmer", "gain": -20 },
+    { "beat": 17.25, "sfx": "suck", "gain": -19, "peakAt": 18 },
+    { "beat": 18, "sfx": "chime", "gain": -15, "note": 84 },
+    { "beat": 18.75, "sfx": "burst", "gain": -17 },
+
+    { "beat": 19, "sfx": "hit", "gain": -13 },
+    { "beat": 19.5, "sfx": "bloop", "gain": -16, "note": 60 },
+    { "beat": 20.25, "sfx": "bloop", "gain": -16, "note": 67 },
+    { "beat": 21, "sfx": "bloop", "gain": -16, "note": 63 },
+    { "beat": 21.5, "sfx": "bloop", "gain": -17, "note": 72 },
+
+    { "beat": 22, "sfx": "hit", "gain": -13 },
+    { "beat": 22.25, "sfx": "data", "gain": -21 },
+
+    { "beat": 24, "sfx": "zoomOut", "gain": -15 },
+    { "beat": 26, "sfx": "tick", "gain": -21, "note": 89 },
+    { "beat": 26.25, "sfx": "tick", "gain": -21, "note": 91 },
+    { "beat": 26.5, "sfx": "tick", "gain": -21, "note": 92 },
+    { "beat": 26.75, "sfx": "tick", "gain": -21, "note": 94 },
+    { "beat": 27, "sfx": "tick", "gain": -21, "note": 96 },
+    { "beat": 27.25, "sfx": "tick", "gain": -20, "note": 97 },
+    { "beat": 27.25, "sfx": "suck", "gain": -14, "peakAt": 28 },
+
+    { "beat": 28, "sfx": "impact", "gain": -9 },
+    { "beat": 28.25, "sfx": "shimmer", "gain": -21 },
+    { "beat": 29, "sfx": "chime", "gain": -17, "note": 89 }
+  ]
+}
