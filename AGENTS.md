@@ -69,6 +69,9 @@ chipku-reel/               Separate CHIPKU promo project (own package.json, Root
 showreel/                  Separate CLAUDE motion-design showreel (15 s, 60 fps, Remotion 4.0.533, own
                            package.json and node_modules, Python-synthesised audio). Work inside
                            showreel/ (`npm install && npm run dev`); see showreel/README.md.
+prince-launch/             Separate Prince Garg personal-brand launch film (30 s, 30 fps, Remotion 4.0.533,
+                           own package.json and node_modules, Python-synthesised audio). Work inside
+                           prince-launch/ (`npm install && npm run dev`); see prince-launch/README.md.
 ```
 
 ### Reusable components (`src/components`)

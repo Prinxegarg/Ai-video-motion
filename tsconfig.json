@@ -19,6 +19,7 @@
     "chipku-reel/node_modules",
     "chipku-reel/out",
     "chipku-reel/remotion.config.ts",
-    "showreel"
+    "showreel",
+    "prince-launch"
   ]
 }
