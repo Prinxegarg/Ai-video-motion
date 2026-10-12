@@ -12,7 +12,7 @@ const WORDS: [string, number][] = [
 ];
 
 // Orbit ring around the portrait (screen space).
-const RING = { cx: 1330, cy: 690, rx: 430, ry: 84, rot: -9 };
+const RING = { cx: 1410, cy: 650, rx: 470, ry: 86, rot: -8 };
 
 const ringPoint = (theta: number) => {
   const r = (RING.rot * Math.PI) / 180;
@@ -104,10 +104,10 @@ export const Reveal: React.FC = () => {
         <div
           style={{
             position: "absolute",
-            left: 880,
-            top: 112,
-            width: 1092,
-            height: 987,
+            left: 984,
+            top: 104,
+            width: 900,
+            height: 976,
             opacity: photo,
             translate: `${(1 - photo) * 40}px ${(1 - photo) * 120}px`,
             scale: `${push * lerp(1.06, 1, photo)}`,
@@ -115,7 +115,7 @@ export const Reveal: React.FC = () => {
           }}
         >
           <Img
-            src={staticFile("photo/prince-cutout.png")}
+            src={staticFile("photo/prince-front.png")}
             style={{ width: "100%", height: "100%" }}
           />
           {/* light sweep, clipped to the cut-out */}
@@ -125,7 +125,7 @@ export const Reveal: React.FC = () => {
               inset: 0,
               background: `linear-gradient(105deg, transparent ${lerp(-30, 110, sweep) - 12}%, rgba(255,255,255,0.35) ${lerp(-30, 110, sweep)}%, transparent ${lerp(-30, 110, sweep) + 12}%)`,
               mixBlendMode: "overlay",
-              WebkitMaskImage: `url(${staticFile("photo/prince-cutout.png")})`,
+              WebkitMaskImage: `url(${staticFile("photo/prince-front.png")})`,
               WebkitMaskSize: "100% 100%",
             }}
           />

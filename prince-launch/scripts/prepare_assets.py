@@ -8,6 +8,10 @@ Prepares the film's image assets from the originals in source/.
       shoulders, and faded out at the chest so the jacket's sponsor logos and the
       rink signage never read on screen.
 
+  source/prince-portrait-front.jpg  →  public/photo/prince-front.png
+      The front-facing portrait: same treatment, keeping only the largest person
+      (drops the man in the background), with the chest wordmark painted out.
+
   public/textures/grain.png   static film grain tile
 
   src/data/wordmark.json      "PRINCE GARG" sampled from Inter ExtraBold onto a dot
@@ -26,7 +30,14 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
-from scipy.ndimage import gaussian_filter, uniform_filter
+from scipy.ndimage import (
+    binary_dilation,
+    binary_fill_holes,
+    gaussian_filter,
+    label,
+    maximum_filter,
+    uniform_filter,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -99,6 +110,37 @@ def cutout(model: Path) -> None:
     print(f"{dest.relative_to(ROOT)}  {x1 - x0}x{y1 - y0}")
 
 
+def cutout_front(model: Path) -> None:
+    src = Image.open(ROOT / "source" / "prince-portrait-front.jpg").convert("RGB")
+    lum = np.asarray(src.convert("L"), dtype=np.float32) / 255.0
+    person = segment(src, model)
+    # Keep only the main subject: the largest connected person region.
+    lab, n = label(person > 0.5)
+    big = 1 + int(np.argmax([(lab == i).sum() for i in range(1, n + 1)]))
+    body = binary_fill_holes(lab == big)
+    prob = np.where(binary_dilation(body, iterations=12), np.maximum(person, body * 1.0), 0)
+    alpha = gaussian_filter(np.clip((guided_filter(lum, prob, 6, 1e-3) - 0.35) / 0.3, 0, 1), 0.6)
+
+    h, w = lum.shape
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    # Paint out the dark chest wordmark with the light knit around it.
+    logo = np.exp(-((((xx - 760) / 52) ** 2 + ((yy - 1131) / 22) ** 2) ** 3))
+    clean = gaussian_filter(maximum_filter(lum, size=11), 3)
+    lum = lum * (1 - logo) + clean * logo
+
+    g = np.clip((lum - 0.06) / 0.86, 0, 1) ** 1.08
+    face = np.exp(-(((xx - 520) / 210) ** 2 + ((yy - 690) / 240) ** 2))
+    g = np.clip(g * (1 + 0.12 * face), 0, 1) * 0.95 + 0.02
+
+    x0, x1, y0, y1 = 0, 1125, 340, 1560
+    fade = np.clip((1520 - yy) / 300, 0, 1) ** 1.5
+    a = (alpha * fade)[y0:y1, x0:x1]
+    g8 = (g[y0:y1, x0:x1] * 255).astype(np.uint8)
+    dest = ROOT / "public" / "photo" / "prince-front.png"
+    Image.fromarray(np.dstack([g8, g8, g8, (a * 255).astype(np.uint8)]), "RGBA").save(dest, optimize=True)
+    print(f"{dest.relative_to(ROOT)}  {x1 - x0}x{y1 - y0}")
+
+
 def grain() -> None:
     rng = np.random.default_rng(2026)
     n = gaussian_filter(rng.standard_normal((512, 512)), 0.7, mode="wrap")
@@ -157,5 +199,6 @@ if __name__ == "__main__":
     ap.add_argument("--model", type=Path, required=True)
     args = ap.parse_args()
     cutout(args.model)
+    cutout_front(args.model)
     grain()
     wordmark()

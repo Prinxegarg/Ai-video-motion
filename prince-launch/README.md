@@ -68,11 +68,11 @@ On an offline machine, point Remotion at a local Chrome Headless Shell with
     arrangement around the scenes: an intro riser, the drop at 3 s, groove, a lift
     at 15 s, tension at 23 s, and the final hit at 26 s.
 - **The portrait.**
-  - `source/prince-portrait.jpg` is cut out with MediaPipe's selfie segmenter and
+  - `source/prince-portrait.jpg` (side profile) and `source/prince-portrait-front.jpg` (front-facing, used in the reveal and the profile avatar) are cut out with MediaPipe's selfie segmenter and
     refined with a guided filter.
   - It's graded to deep monochrome and cropped to head and shoulders.
-  - The jacket's sponsor text and the rink signage are painted out or faded, so no
-    third-party logos read on screen.
+  - Sponsor text on the jacket, the ZARA wordmark, the rink signage and the person in the background are removed, so no
+    third-party logos or other people appear on screen.
 - **The wordmark.** It is sampled from Inter ExtraBold onto a 13 px grid in
   `src/data/wordmark.json`, giving the Nothing-style dot matrix.
 - **Determinism.** Everything is a pure function of the frame. Randomness is seeded,

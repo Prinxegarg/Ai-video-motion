@@ -51,8 +51,8 @@ const ProfileScreen: React.FC<{
         }}
       >
         <Img
-          src={staticFile("photo/prince-cutout.png")}
-          style={{ width: 170, marginLeft: -36, marginTop: -6 }}
+          src={staticFile("photo/prince-front.png")}
+          style={{ width: 300, marginLeft: -100, marginTop: -50 }}
         />
       </div>
       <div>
